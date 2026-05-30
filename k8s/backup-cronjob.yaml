@@ -1,0 +1,195 @@
+# Immich Backup CronJob
+#
+# Backs up:
+#   1. Postgres DB via pg_dump → /hdd/backups/postgres/immich-<ts>.sql.zst
+#   2. Immich library (originals, excl. thumbs & encoded-video) via tar →
+#      /hdd/backups/library/immich-library-<ts>.tar.zst
+#   3. Prunes to keep last 7 of each type
+#
+# Compression: zstd -3 -T0 (roughly 25% smaller than gzip and 2-3x faster).
+#
+# *** TRIGGER MODEL: MANUAL ONLY (or via webapp) ***
+# suspend: true — trigger manually via:
+#   kubectl create job --from=cronjob/immich-backup immich-backup-<ts> -n ${HOMELAB_NAMESPACE}
+#
+# PREREQUISITES (one-time, on the Mac before first run):
+#   mkdir -p ${HOMELAB_TIER_HDD_PATH}/backups/postgres
+#   mkdir -p ${HOMELAB_TIER_HDD_PATH}/backups/library
+# (The script also runs mkdir -p on both subdirs for safety.)
+#
+# DB connection: Service immich-postgres:5432, db=immich
+# Credentials:   Secret immich-postgres-secret (POSTGRES_USER / POSTGRES_PASSWORD)
+#
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: immich-backup
+  namespace: ${HOMELAB_NAMESPACE}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: immich-backup
+  namespace: ${HOMELAB_NAMESPACE}
+spec:
+  # Suspended: schedule is here for future automation only. Runs after
+  # the tier movers (which are at 0 3 * * *) to catch any newly tiered files.
+  # To enable: kubectl patch cronjob immich-backup \
+  #   -n ${HOMELAB_NAMESPACE} -p '{"spec":{"suspend":false}}'
+  suspend: true
+  schedule: "0 4 * * *"
+  timeZone: "Europe/London"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: immich-backup
+          restartPolicy: OnFailure
+          securityContext:
+            runAsUser: 0
+
+          containers:
+            - name: backup
+              # postgres:17-alpine includes pg_dump + psql; tar + gzip built in.
+              image: postgres:17-alpine
+              command: ["/bin/sh", "-c"]
+              args:
+                - |
+                  #!/bin/sh
+                  # busybox-compatible: no process substitution, no pipefail,
+                  # counters via variables (single container, no subshell counter issue).
+                  set -eu
+                  set -o pipefail
+
+                  echo "=== Immich Backup starting ==="
+
+                  # zstd: not in postgres:17-alpine.
+                  # tar:  alpine ships busybox tar, which lacks --no-dereference
+                  #       and silently prints usage + exits 0 on unknown flags
+                  #       (caught only because we set pipefail).
+                  apk add --no-cache zstd tar >/dev/null
+
+                  # Pre-create backup subdirs (parent /hdd/backups is a hostPath mount)
+                  mkdir -p /hdd/backups/postgres
+                  mkdir -p /hdd/backups/library
+
+                  DATE="$(date +%Y%m%d-%H%M%S)"
+                  PRUNED=0
+
+                  # ------------------------------------------------------------------
+                  # 1. Postgres dump
+                  # ------------------------------------------------------------------
+                  PG_OUT="/hdd/backups/postgres/immich-${DATE}.sql.zst"
+                  echo "=== Step 1: pg_dump → ${PG_OUT} ==="
+                  PGPASSWORD="${POSTGRES_PASSWORD}" pg_dump \
+                    -h immich-postgres \
+                    -U "${POSTGRES_USER}" \
+                    -d immich \
+                    --no-owner \
+                    --clean \
+                    --if-exists \
+                    | zstd -3 -T0 -q -o "${PG_OUT}"
+                  PG_BYTES="$(stat -c%s "${PG_OUT}" 2>/dev/null || echo 0)"
+                  echo "pg_dump complete: ${PG_BYTES} bytes"
+
+                  # ------------------------------------------------------------------
+                  # 2. Library tar (originals only; skip thumbs and encoded-video
+                  #    which are auto-regenerable by Immich)
+                  # ------------------------------------------------------------------
+                  LIB_OUT="/hdd/backups/library/immich-library-${DATE}.tar.zst"
+                  echo "=== Step 2: tar library → ${LIB_OUT} ==="
+                  tar \
+                    --no-dereference \
+                    -cf - \
+                    --exclude='./thumbs' \
+                    --exclude='./encoded-video' \
+                    -C /data \
+                    . \
+                    | zstd -3 -T0 -q -o "${LIB_OUT}"
+                  LIB_BYTES="$(stat -c%s "${LIB_OUT}" 2>/dev/null || echo 0)"
+                  echo "tar complete: ${LIB_BYTES} bytes"
+
+                  # ------------------------------------------------------------------
+                  # 3. Prune — keep last 7 of each backup type
+                  # ------------------------------------------------------------------
+                  echo "=== Step 3: pruning old backups (keep=7) ==="
+
+                  # Postgres dumps
+                  cd /hdd/backups/postgres
+                  FILELIST=/tmp/prune_list
+                  ls -1t immich-*.sql.zst 2>/dev/null | tail -n +8 > "$FILELIST" || true
+                  while IFS= read -r old; do
+                    echo "PRUNE postgres/${old}"
+                    rm -f "$old"
+                    PRUNED="$(( PRUNED + 1 ))"
+                  done < "$FILELIST"
+                  rm -f "$FILELIST"
+
+                  # Library archives
+                  cd /hdd/backups/library
+                  ls -1t immich-library-*.tar.zst 2>/dev/null | tail -n +8 > "$FILELIST" || true
+                  while IFS= read -r old; do
+                    echo "PRUNE library/${old}"
+                    rm -f "$old"
+                    PRUNED="$(( PRUNED + 1 ))"
+                  done < "$FILELIST"
+                  rm -f "$FILELIST"
+
+                  # ------------------------------------------------------------------
+                  # 4. Summary
+                  # ------------------------------------------------------------------
+                  echo "SUMMARY backup pg_bytes=${PG_BYTES} library_bytes=${LIB_BYTES} pruned=${PRUNED}"
+                  echo "=== Immich Backup complete ==="
+
+              env:
+                - name: POSTGRES_USER
+                  valueFrom:
+                    secretKeyRef:
+                      name: immich-postgres-secret
+                      key: POSTGRES_USER
+                - name: POSTGRES_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: immich-postgres-secret
+                      key: POSTGRES_PASSWORD
+
+              resources:
+                requests:
+                  memory: "256Mi"
+                  cpu: "200m"
+                limits:
+                  memory: "1Gi"
+                  cpu: "1"
+
+              volumeMounts:
+                # HDD backup target — ${HOMELAB_TIER_HDD_PATH}/backups on macOS host.
+                # type: "" required (see README: OrbStack HDD mount fd limit).
+                # Pre-create backups/postgres/ and backups/library/ on HDD before
+                # first run (or let the script mkdir -p handle it).
+                - name: hdd-backups
+                  mountPath: /hdd/backups
+
+                # Immich library SSD PVC — read-only source for the tar backup.
+                # We mount the PVC directly (not the raw hostPath) so this CronJob
+                # does not need to track PVC UUID changes.
+                - name: immich-library
+                  mountPath: /data
+                  readOnly: true
+
+          volumes:
+            # HDD — ${HOMELAB_TIER_HDD_PATH}/backups must exist on the Mac before first run.
+            # type: "" required (see OrbStack HDD mount fd limit note in README).
+            - name: hdd-backups
+              hostPath:
+                path: ${HOMELAB_TIER_HDD_PATH}/backups
+                type: ""
+
+            # Immich library SSD PVC (mounted read-only for safety)
+            - name: immich-library
+              persistentVolumeClaim:
+                claimName: immich-upload-localpath-pvc
+                readOnly: true

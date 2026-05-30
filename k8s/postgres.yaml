@@ -1,0 +1,97 @@
+# Immich Postgres
+#
+# Runs on local-path StorageClass (ext4 inside OrbStack VM) because the HDD
+# is exFAT — Postgres requires POSIX semantics the HDD cannot provide.
+# Image is Immich's own postgres build with vectorchord + pgvector extensions.
+#
+# Backup strategy: periodic pg_dump to HDD via backup-cronjob.yaml.
+#
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: immich-postgres-secret
+  namespace: ${HOMELAB_NAMESPACE}
+type: Opaque
+stringData:
+  POSTGRES_DB: immich
+  POSTGRES_USER: immich
+  POSTGRES_PASSWORD: ${IMMICH_DB_PASSWORD}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: immich-postgres-pvc
+  namespace: ${HOMELAB_NAMESPACE}
+spec:
+  accessModes: [ReadWriteOnce]
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 20Gi
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: immich-postgres
+  namespace: ${HOMELAB_NAMESPACE}
+spec:
+  serviceName: immich-postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app: immich-postgres
+  template:
+    metadata:
+      labels:
+        app: immich-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: ghcr.io/immich-app/postgres:17-vectorchord0.4.3-pgvector0.8.0
+          envFrom:
+            - secretRef:
+                name: immich-postgres-secret
+          env:
+            - name: POSTGRES_INITDB_ARGS
+              value: "--data-checksums"
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          ports:
+            - name: postgres
+              containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+          readinessProbe:
+            exec:
+              command: ["pg_isready", "-U", "immich"]
+            initialDelaySeconds: 15
+            periodSeconds: 30
+            timeoutSeconds: 15
+            failureThreshold: 5
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "2Gi"
+              cpu: "2"
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: immich-postgres-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: immich-postgres
+  namespace: ${HOMELAB_NAMESPACE}
+spec:
+  clusterIP: None
+  selector:
+    app: immich-postgres
+  ports:
+    - port: 5432
+      targetPort: postgres
+      name: postgres

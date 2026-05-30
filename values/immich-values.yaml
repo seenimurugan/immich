@@ -1,0 +1,199 @@
+# Immich Helm values for homelab
+# Chart: immich/immich 0.11.1 (AppVersion v2.6.3)
+# Image tag overridden to v2.7.5 below (chart hasn't released a v2.7.x chart yet).
+#
+# deploy.sh runs this through envsubst before passing to helm, so ${VAR} tokens
+# below are replaced at deploy time from your .env file.
+
+controllers:
+  main:
+    containers:
+      main:
+        image:
+          tag: v2.7.5
+        env:
+          DB_HOSTNAME: immich-postgres
+          DB_PORT: "5432"
+          DB_DATABASE_NAME: immich
+          DB_USERNAME:
+            valueFrom:
+              secretKeyRef:
+                name: immich-postgres-secret
+                key: POSTGRES_USER
+          DB_PASSWORD:
+            valueFrom:
+              secretKeyRef:
+                name: immich-postgres-secret
+                key: POSTGRES_PASSWORD
+          REDIS_HOSTNAME: '{{ printf "%s-valkey" .Release.Name }}'
+          IMMICH_MACHINE_LEARNING_URL: '{{ printf "http://%s-machine-learning:3003" .Release.Name }}'
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "8Gi"
+            cpu: "6"
+
+immich:
+  persistence:
+    library:
+      # SSD-backed library (local-path provisioner, OrbStack VM ext4).
+      #
+      # !! MACHINE-SPECIFIC !! — this PVC name encodes the UUID of the
+      # local-path PV on the original cluster. On a new cluster you must:
+      #   1. Deploy Immich once WITHOUT an existingClaim (let Helm create a new PVC)
+      #   2. Run: kubectl get pv | grep immich-upload
+      #   3. Set IMMICH_UPLOAD_PV_PATH in .env to the new pvc-<uuid> path
+      #   4. Optionally rename the PVC and patch this file, then redeploy.
+      # See README.md "Non-portable bits" for full steps.
+      existingClaim: immich-upload-localpath-pvc
+
+valkey:
+  enabled: true
+  controllers:
+    main:
+      containers:
+        main:
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "500m"
+            limits:
+              memory: "2Gi"
+              cpu: "2"
+          probes:
+            liveness:
+              enabled: true
+              custom: true
+              spec:
+                exec:
+                  command: ["sh", "-c", "valkey-cli ping | grep PONG"]
+                initialDelaySeconds: 30
+                periodSeconds: 30
+                timeoutSeconds: 15
+                failureThreshold: 5
+            readiness:
+              enabled: true
+              custom: true
+              spec:
+                exec:
+                  command: ["sh", "-c", "valkey-cli ping | grep PONG"]
+                initialDelaySeconds: 10
+                periodSeconds: 15
+                timeoutSeconds: 15
+                failureThreshold: 5
+            startup:
+              enabled: true
+              custom: true
+              spec:
+                exec:
+                  command: ["sh", "-c", "valkey-cli ping | grep PONG"]
+                initialDelaySeconds: 10
+                periodSeconds: 15
+                timeoutSeconds: 15
+                failureThreshold: 40
+
+server:
+  enabled: true
+  # HDD tier mount — symlinks created by tier-mover-immich (cluster-setup repo)
+  # target /data-hdd/... Without this mount, Immich can't follow the symlinks.
+  # type: "" required (do NOT use DirectoryOrCreate — OrbStack HDD mount fd limit).
+  # See: https://github.com/seenimurugan/homelab-cluster-setup (storage-tier docs)
+  persistence:
+    hdd:
+      enabled: true
+      type: hostPath
+      hostPath: ${HOMELAB_TIER_HDD_PATH}/immich-library
+      hostPathType: ""
+      globalMounts:
+        - path: /data-hdd
+  controllers:
+    main:
+      containers:
+        main:
+          probes:
+            liveness:
+              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /api/server/ping
+                  port: 2283
+                initialDelaySeconds: 60
+                periodSeconds: 60
+                timeoutSeconds: 15
+                failureThreshold: 5
+            readiness:
+              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /api/server/ping
+                  port: 2283
+                initialDelaySeconds: 30
+                periodSeconds: 30
+                timeoutSeconds: 15
+                failureThreshold: 5
+            startup:
+              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /api/server/ping
+                  port: 2283
+                initialDelaySeconds: 15
+                periodSeconds: 15
+                timeoutSeconds: 15
+                failureThreshold: 40
+
+machine-learning:
+  enabled: true
+  controllers:
+    main:
+      replicas: 1   # bump to 3 manually after a bulk upload to drain ML queue faster
+      containers:
+        main:
+          image:
+            tag: v2.7.5
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "6Gi"
+              cpu: "4"
+          probes:
+            liveness:
+              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /ping
+                  port: 3003
+                initialDelaySeconds: 60
+                periodSeconds: 60
+                timeoutSeconds: 15
+                failureThreshold: 5
+            readiness:
+              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /ping
+                  port: 3003
+                initialDelaySeconds: 30
+                periodSeconds: 30
+                timeoutSeconds: 15
+                failureThreshold: 5
+            startup:
+              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /ping
+                  port: 3003
+                initialDelaySeconds: 15
+                periodSeconds: 15
+                timeoutSeconds: 15
+                failureThreshold: 40

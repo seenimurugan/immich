@@ -1,0 +1,13 @@
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.log
+
+# Temp helm values file created by deploy.sh
+/tmp/immich-values.yaml
+
+# IDE
+.idea/
+.vscode/
+*.swp

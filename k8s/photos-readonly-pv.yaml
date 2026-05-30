@@ -1,0 +1,39 @@
+# Read-only access to Immich's photo library, mounted into Jellyfin
+# so Jellyfin can serve photos to TV apps. Jellyfin must NOT write here —
+# only Immich owns this storage.
+#
+# NOTE: hostPath points at ${HOMELAB_HDD_PATH} — the primary HDD (HFS+/exFAT).
+# This is the read-side mount. The immich library is stored there by the
+# storage-tier mover. See cluster-setup repo for tier-mover documentation.
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: immich-photos-readonly-pv
+  labels:
+    app: jellyfin
+    purpose: immich-photos-ro
+spec:
+  capacity:
+    storage: 1Ti
+  accessModes: [ReadOnlyMany]
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-hdd
+  hostPath:
+    path: ${HOMELAB_HDD_PATH}/immich/upload/library
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: immich-photos-readonly-pvc
+  namespace: ${HOMELAB_NAMESPACE}
+spec:
+  accessModes: [ReadOnlyMany]
+  storageClassName: local-hdd
+  resources:
+    requests:
+      storage: 1Ti
+  selector:
+    matchLabels:
+      app: jellyfin
+      purpose: immich-photos-ro
