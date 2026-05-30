@@ -1,0 +1,3475 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "setup-graph.sh",
+      "file_type": "code",
+      "source_file": "setup-graph.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "setup_graph_sh",
+      "community": 30,
+      "norm_label": "setup-graph.sh"
+    },
+    {
+      "label": "setup-graph.sh script",
+      "file_type": "code",
+      "source_file": "setup-graph.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "users_nila_developer_apps_immich_setup_graph_sh__entry",
+      "community": 30,
+      "norm_label": "setup-graph.sh script"
+    },
+    {
+      "label": ".opencode.json",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L1",
+      "id": "opencode_json",
+      "community": 6,
+      "norm_label": ".opencode.json"
+    },
+    {
+      "label": "mcpServers",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L2",
+      "id": "immich_opencode_mcpservers",
+      "community": 6,
+      "norm_label": "mcpservers"
+    },
+    {
+      "label": "code-review-graph",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L3",
+      "id": "immich_opencode_mcpservers_code_review_graph",
+      "community": 6,
+      "norm_label": "code-review-graph"
+    },
+    {
+      "label": "command",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L4",
+      "id": "immich_opencode_code_review_graph_command",
+      "community": 6,
+      "norm_label": "command"
+    },
+    {
+      "label": "args",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L5",
+      "id": "immich_opencode_code_review_graph_args",
+      "community": 6,
+      "norm_label": "args"
+    },
+    {
+      "label": "cwd",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L10",
+      "id": "immich_opencode_code_review_graph_cwd",
+      "community": 6,
+      "norm_label": "cwd"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L11",
+      "id": "immich_opencode_code_review_graph_type",
+      "community": 6,
+      "norm_label": "type"
+    },
+    {
+      "label": "env",
+      "file_type": "code",
+      "source_file": ".opencode.json",
+      "source_location": "L12",
+      "id": "immich_opencode_code_review_graph_env",
+      "community": 6,
+      "norm_label": "env"
+    },
+    {
+      "label": "undeploy.sh",
+      "file_type": "code",
+      "source_file": "undeploy.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "undeploy_sh",
+      "community": 32,
+      "norm_label": "undeploy.sh"
+    },
+    {
+      "label": "undeploy.sh script",
+      "file_type": "code",
+      "source_file": "undeploy.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "users_nila_developer_apps_immich_undeploy_sh__entry",
+      "community": 32,
+      "norm_label": "undeploy.sh script"
+    },
+    {
+      "label": ".mcp.json",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_config_file"
+      },
+      "id": "mcp_json",
+      "community": 26,
+      "norm_label": ".mcp.json"
+    },
+    {
+      "label": "code-review-graph",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "id": "immich_mcp_mcp_server_code_review_graph",
+      "community": 26,
+      "norm_label": "code-review-graph"
+    },
+    {
+      "label": "/Users/nila/.local/pipx/venvs/code-review-graph/bin/python",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "id": "mcp_json_mcp_command_users_nila_local_pipx_venvs_code_review_graph_bin_python",
+      "community": 26,
+      "norm_label": "/users/nila/.local/pipx/venvs/code-review-graph/bin/python"
+    },
+    {
+      "label": "deploy.sh",
+      "file_type": "code",
+      "source_file": "deploy.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "deploy_sh",
+      "community": 28,
+      "norm_label": "deploy.sh"
+    },
+    {
+      "label": "deploy.sh script",
+      "file_type": "code",
+      "source_file": "deploy.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "users_nila_developer_apps_immich_deploy_sh__entry",
+      "community": 28,
+      "norm_label": "deploy.sh script"
+    },
+    {
+      "label": "mcp.json",
+      "file_type": "code",
+      "source_file": ".cursor/mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_config_file"
+      },
+      "id": "cursor_mcp_json",
+      "community": 25,
+      "norm_label": "mcp.json"
+    },
+    {
+      "label": "code-review-graph",
+      "file_type": "code",
+      "source_file": ".cursor/mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "id": "cursor_mcp_mcp_server_code_review_graph",
+      "community": 25,
+      "norm_label": "code-review-graph"
+    },
+    {
+      "label": "/Users/nila/.local/pipx/venvs/code-review-graph/bin/python",
+      "file_type": "code",
+      "source_file": ".cursor/mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "id": "cursor_mcp_json_mcp_command_users_nila_local_pipx_venvs_code_review_graph_bin_python",
+      "community": 25,
+      "norm_label": "/users/nila/.local/pipx/venvs/code-review-graph/bin/python"
+    },
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L1",
+      "id": "gemini_settings_json",
+      "community": 23,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L2",
+      "id": "gemini_settings_hooks",
+      "community": 23,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "SessionStart",
+      "file_type": "code",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L3",
+      "id": "gemini_settings_hooks_sessionstart",
+      "community": 23,
+      "norm_label": "sessionstart"
+    },
+    {
+      "label": "AfterTool",
+      "file_type": "code",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L16",
+      "id": "gemini_settings_hooks_aftertool",
+      "community": 23,
+      "norm_label": "aftertool"
+    },
+    {
+      "label": "crg-update.sh",
+      "file_type": "code",
+      "source_file": ".gemini/hooks/crg-update.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "gemini_hooks_crg_update_sh",
+      "community": 31,
+      "norm_label": "crg-update.sh"
+    },
+    {
+      "label": "crg-update.sh script",
+      "file_type": "code",
+      "source_file": ".gemini/hooks/crg-update.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "users_nila_developer_apps_immich_gemini_hooks_crg_update_sh__entry",
+      "community": 31,
+      "norm_label": "crg-update.sh script"
+    },
+    {
+      "label": "crg-session-start.sh",
+      "file_type": "code",
+      "source_file": ".gemini/hooks/crg-session-start.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "gemini_hooks_crg_session_start_sh",
+      "community": 29,
+      "norm_label": "crg-session-start.sh"
+    },
+    {
+      "label": "crg-session-start.sh script",
+      "file_type": "code",
+      "source_file": ".gemini/hooks/crg-session-start.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "users_nila_developer_apps_immich_gemini_hooks_crg_session_start_sh__entry",
+      "community": 29,
+      "norm_label": "crg-session-start.sh script"
+    },
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L1",
+      "id": "qoder_settings_json",
+      "community": 24,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L2",
+      "id": "qoder_settings_hooks",
+      "community": 24,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PostToolUse",
+      "file_type": "code",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L3",
+      "id": "qoder_settings_hooks_posttooluse",
+      "community": 24,
+      "norm_label": "posttooluse"
+    },
+    {
+      "label": "SessionStart",
+      "file_type": "code",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L15",
+      "id": "qoder_settings_hooks_sessionstart",
+      "community": 24,
+      "norm_label": "sessionstart"
+    },
+    {
+      "label": "mcp.json",
+      "file_type": "code",
+      "source_file": ".qoder/mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_config_file"
+      },
+      "id": "qoder_mcp_json",
+      "community": 27,
+      "norm_label": "mcp.json"
+    },
+    {
+      "label": "code-review-graph",
+      "file_type": "code",
+      "source_file": ".qoder/mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "id": "qoder_mcp_mcp_server_code_review_graph",
+      "community": 27,
+      "norm_label": "code-review-graph"
+    },
+    {
+      "label": "/Users/nila/.local/pipx/venvs/code-review-graph/bin/python",
+      "file_type": "code",
+      "source_file": ".qoder/mcp.json",
+      "source_location": "L1",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "id": "qoder_mcp_json_mcp_command_users_nila_local_pipx_venvs_code_review_graph_bin_python",
+      "community": 27,
+      "norm_label": "/users/nila/.local/pipx/venvs/code-review-graph/bin/python"
+    },
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L1",
+      "id": "claude_settings_json",
+      "community": 21,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "id": "claude_settings_hooks",
+      "community": 21,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PostToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "id": "claude_settings_hooks_posttooluse",
+      "community": 21,
+      "norm_label": "posttooluse"
+    },
+    {
+      "label": "SessionStart",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L15",
+      "id": "claude_settings_hooks_sessionstart",
+      "community": 21,
+      "norm_label": "sessionstart"
+    },
+    {
+      "label": "QODER.md",
+      "file_type": "document",
+      "source_file": "QODER.md",
+      "source_location": "L1",
+      "id": "qoder_md",
+      "community": 19,
+      "norm_label": "qoder.md"
+    },
+    {
+      "label": "MCP Tools: code-review-graph",
+      "file_type": "document",
+      "source_file": "QODER.md",
+      "source_location": "L2",
+      "id": "immich_qoder_mcp_tools_code_review_graph",
+      "community": 19,
+      "norm_label": "mcp tools: code-review-graph"
+    },
+    {
+      "label": "When to use graph tools FIRST",
+      "file_type": "document",
+      "source_file": "QODER.md",
+      "source_location": "L10",
+      "id": "immich_qoder_when_to_use_graph_tools_first",
+      "community": 19,
+      "norm_label": "when to use graph tools first"
+    },
+    {
+      "label": "Key Tools",
+      "file_type": "document",
+      "source_file": "QODER.md",
+      "source_location": "L20",
+      "id": "immich_qoder_key_tools",
+      "community": 19,
+      "norm_label": "key tools"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": "QODER.md",
+      "source_location": "L33",
+      "id": "immich_qoder_workflow",
+      "community": 19,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 3,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "immich",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "immich_readme_immich",
+      "community": 3,
+      "norm_label": "immich"
+    },
+    {
+      "label": "Depends on",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L6",
+      "id": "immich_readme_depends_on",
+      "community": 3,
+      "norm_label": "depends on"
+    },
+    {
+      "label": "Quick start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "id": "immich_readme_quick_start",
+      "community": 3,
+      "norm_label": "quick start"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "id": "immich_readme_access",
+      "community": 3,
+      "norm_label": "access"
+    },
+    {
+      "label": "Tear down",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "id": "immich_readme_tear_down",
+      "community": 3,
+      "norm_label": "tear down"
+    },
+    {
+      "label": "Docs",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "id": "immich_readme_docs",
+      "community": 3,
+      "norm_label": "docs"
+    },
+    {
+      "label": "!! NON-PORTABLE BITS \u2014 read before deploying on a new machine/cluster !!",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "id": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "community": 3,
+      "norm_label": "!! non-portable bits \u2014 read before deploying on a new machine/cluster !!"
+    },
+    {
+      "label": "1. PVC UUID \u2014 `immich-upload-localpath-pvc` (HIGH PRIORITY)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L61",
+      "id": "immich_readme_1_pvc_uuid_immich_upload_localpath_pvc_high_priority",
+      "community": 3,
+      "norm_label": "1. pvc uuid \u2014 `immich-upload-localpath-pvc` (high priority)"
+    },
+    {
+      "label": "2. HDD paths (machine-specific)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L84",
+      "id": "immich_readme_2_hdd_paths_machine_specific",
+      "community": 3,
+      "norm_label": "2. hdd paths (machine-specific)"
+    },
+    {
+      "label": "3. Storage-tier symlinks",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "id": "immich_readme_3_storage_tier_symlinks",
+      "community": 3,
+      "norm_label": "3. storage-tier symlinks"
+    },
+    {
+      "label": "4. Postgres DB is NOT on the HDD",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "id": "immich_readme_4_postgres_db_is_not_on_the_hdd",
+      "community": 3,
+      "norm_label": "4. postgres db is not on the hdd"
+    },
+    {
+      "label": "5. Tailscale ingress hostname",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L131",
+      "id": "immich_readme_5_tailscale_ingress_hostname",
+      "community": 3,
+      "norm_label": "5. tailscale ingress hostname"
+    },
+    {
+      "label": "6. OrbStack HDD mount fd limit",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L137",
+      "id": "immich_readme_6_orbstack_hdd_mount_fd_limit",
+      "community": 3,
+      "norm_label": "6. orbstack hdd mount fd limit"
+    },
+    {
+      "label": "GEMINI.md",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L1",
+      "id": "gemini_md",
+      "community": 18,
+      "norm_label": "gemini.md"
+    },
+    {
+      "label": "MCP Tools: code-review-graph",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L2",
+      "id": "immich_gemini_mcp_tools_code_review_graph",
+      "community": 18,
+      "norm_label": "mcp tools: code-review-graph"
+    },
+    {
+      "label": "When to use graph tools FIRST",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L10",
+      "id": "immich_gemini_when_to_use_graph_tools_first",
+      "community": 18,
+      "norm_label": "when to use graph tools first"
+    },
+    {
+      "label": "Key Tools",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L20",
+      "id": "immich_gemini_key_tools",
+      "community": 18,
+      "norm_label": "key tools"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L33",
+      "id": "immich_gemini_workflow",
+      "community": 18,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents_md",
+      "community": 16,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "MCP Tools: code-review-graph",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L2",
+      "id": "immich_agents_mcp_tools_code_review_graph",
+      "community": 16,
+      "norm_label": "mcp tools: code-review-graph"
+    },
+    {
+      "label": "When to use graph tools FIRST",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L10",
+      "id": "immich_agents_when_to_use_graph_tools_first",
+      "community": 16,
+      "norm_label": "when to use graph tools first"
+    },
+    {
+      "label": "Key Tools",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "id": "immich_agents_key_tools",
+      "community": 16,
+      "norm_label": "key tools"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L33",
+      "id": "immich_agents_workflow",
+      "community": 16,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_md",
+      "community": 17,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "MCP Tools: code-review-graph",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L2",
+      "id": "immich_claude_mcp_tools_code_review_graph",
+      "community": 17,
+      "norm_label": "mcp tools: code-review-graph"
+    },
+    {
+      "label": "When to use graph tools FIRST",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L10",
+      "id": "immich_claude_when_to_use_graph_tools_first",
+      "community": 17,
+      "norm_label": "when to use graph tools first"
+    },
+    {
+      "label": "Key Tools",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "id": "immich_claude_key_tools",
+      "community": 17,
+      "norm_label": "key tools"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L33",
+      "id": "immich_claude_workflow",
+      "community": 17,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L1",
+      "id": "gemini_skills_debug_issue_skill_md",
+      "community": 11,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Debug Issue",
+      "file_type": "document",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L6",
+      "id": "gemini_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "community": 11,
+      "norm_label": "debug issue"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L10",
+      "id": "gemini_skills_debug_issue_skill_md_debug_issue_skill_steps",
+      "community": 11,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Tips",
+      "file_type": "document",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L18",
+      "id": "gemini_skills_debug_issue_skill_md_debug_issue_skill_tips",
+      "community": 11,
+      "norm_label": "tips"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L24",
+      "id": "gemini_skills_debug_issue_skill_md_debug_issue_skill_token_efficiency_rules",
+      "community": 11,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L1",
+      "id": "gemini_skills_refactor_safely_skill_md",
+      "community": 13,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Refactor Safely",
+      "file_type": "document",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L6",
+      "id": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "community": 13,
+      "norm_label": "refactor safely"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L10",
+      "id": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_steps",
+      "community": 13,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Safety Checks",
+      "file_type": "document",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L18",
+      "id": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_safety_checks",
+      "community": 13,
+      "norm_label": "safety checks"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L25",
+      "id": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_token_efficiency_rules",
+      "community": 13,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L1",
+      "id": "gemini_skills_explore_codebase_skill_md",
+      "community": 12,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Explore Codebase",
+      "file_type": "document",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L6",
+      "id": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "community": 12,
+      "norm_label": "explore codebase"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L10",
+      "id": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_steps",
+      "community": 12,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Tips",
+      "file_type": "document",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L19",
+      "id": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_tips",
+      "community": 12,
+      "norm_label": "tips"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L25",
+      "id": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_token_efficiency_rules",
+      "community": 12,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L1",
+      "id": "gemini_skills_review_changes_skill_md",
+      "community": 14,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Review Changes",
+      "file_type": "document",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L6",
+      "id": "gemini_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "community": 14,
+      "norm_label": "review changes"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L10",
+      "id": "gemini_skills_review_changes_skill_md_review_changes_skill_steps",
+      "community": 14,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Output Format",
+      "file_type": "document",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L18",
+      "id": "gemini_skills_review_changes_skill_md_review_changes_skill_output_format",
+      "community": 14,
+      "norm_label": "output format"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L26",
+      "id": "gemini_skills_review_changes_skill_md_review_changes_skill_token_efficiency_rules",
+      "community": 14,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L1",
+      "id": "claude_skills_debug_issue_skill_md",
+      "community": 7,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Debug Issue",
+      "file_type": "document",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L6",
+      "id": "claude_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "community": 7,
+      "norm_label": "debug issue"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L10",
+      "id": "claude_skills_debug_issue_skill_md_debug_issue_skill_steps",
+      "community": 7,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Tips",
+      "file_type": "document",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L18",
+      "id": "claude_skills_debug_issue_skill_md_debug_issue_skill_tips",
+      "community": 7,
+      "norm_label": "tips"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L24",
+      "id": "claude_skills_debug_issue_skill_md_debug_issue_skill_token_efficiency_rules",
+      "community": 7,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L1",
+      "id": "claude_skills_refactor_safely_skill_md",
+      "community": 9,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Refactor Safely",
+      "file_type": "document",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L6",
+      "id": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "community": 9,
+      "norm_label": "refactor safely"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L10",
+      "id": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_steps",
+      "community": 9,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Safety Checks",
+      "file_type": "document",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L18",
+      "id": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_safety_checks",
+      "community": 9,
+      "norm_label": "safety checks"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L25",
+      "id": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_token_efficiency_rules",
+      "community": 9,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L1",
+      "id": "claude_skills_explore_codebase_skill_md",
+      "community": 8,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Explore Codebase",
+      "file_type": "document",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L6",
+      "id": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "community": 8,
+      "norm_label": "explore codebase"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L10",
+      "id": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_steps",
+      "community": 8,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Tips",
+      "file_type": "document",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L19",
+      "id": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_tips",
+      "community": 8,
+      "norm_label": "tips"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L25",
+      "id": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_token_efficiency_rules",
+      "community": 8,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "skill.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L1",
+      "id": "claude_skills_review_changes_skill_md",
+      "community": 10,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Review Changes",
+      "file_type": "document",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L6",
+      "id": "claude_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "community": 10,
+      "norm_label": "review changes"
+    },
+    {
+      "label": "Steps",
+      "file_type": "document",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L10",
+      "id": "claude_skills_review_changes_skill_md_review_changes_skill_steps",
+      "community": 10,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Output Format",
+      "file_type": "document",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L18",
+      "id": "claude_skills_review_changes_skill_md_review_changes_skill_output_format",
+      "community": 10,
+      "norm_label": "output format"
+    },
+    {
+      "label": "Token Efficiency Rules",
+      "file_type": "document",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L26",
+      "id": "claude_skills_review_changes_skill_md_review_changes_skill_token_efficiency_rules",
+      "community": 10,
+      "norm_label": "token efficiency rules"
+    },
+    {
+      "label": "BULK-UPLOAD.md",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L1",
+      "id": "docs_bulk_upload_md",
+      "community": 1,
+      "norm_label": "bulk-upload.md"
+    },
+    {
+      "label": "Immich Bulk Upload \u2014 runbook",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L1",
+      "id": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "community": 1,
+      "norm_label": "immich bulk upload \u2014 runbook"
+    },
+    {
+      "label": "One-time setup (per machine)",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L7",
+      "id": "docs_bulk_upload_one_time_setup_per_machine",
+      "community": 1,
+      "norm_label": "one-time setup (per machine)"
+    },
+    {
+      "label": "Pause mobile auto-backup during bulk uploads",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L31",
+      "id": "docs_bulk_upload_pause_mobile_auto_backup_during_bulk_uploads",
+      "community": 1,
+      "norm_label": "pause mobile auto-backup during bulk uploads"
+    },
+    {
+      "label": "Scale ML pods AFTER upload, not before",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L64",
+      "id": "docs_bulk_upload_scale_ml_pods_after_upload_not_before",
+      "community": 1,
+      "norm_label": "scale ml pods after upload, not before"
+    },
+    {
+      "label": "Basic upload (single folder)",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L91",
+      "id": "docs_bulk_upload_basic_upload_single_folder",
+      "community": 1,
+      "norm_label": "basic upload (single folder)"
+    },
+    {
+      "label": "Bulk upload from external HDD",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L102",
+      "id": "docs_bulk_upload_bulk_upload_from_external_hdd",
+      "community": 1,
+      "norm_label": "bulk upload from external hdd"
+    },
+    {
+      "label": "Long-running uploads \u2014 run in background",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L123",
+      "id": "docs_bulk_upload_long_running_uploads_run_in_background",
+      "community": 1,
+      "norm_label": "long-running uploads \u2014 run in background"
+    },
+    {
+      "label": "Google Takeout exports (zipped photos)",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L157",
+      "id": "docs_bulk_upload_google_takeout_exports_zipped_photos",
+      "community": 1,
+      "norm_label": "google takeout exports (zipped photos)"
+    },
+    {
+      "label": "Auto-create albums from folder names",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L176",
+      "id": "docs_bulk_upload_auto_create_albums_from_folder_names",
+      "community": 1,
+      "norm_label": "auto-create albums from folder names"
+    },
+    {
+      "label": "After upload \u2014 watch ML jobs drain",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L186",
+      "id": "docs_bulk_upload_after_upload_watch_ml_jobs_drain",
+      "community": 1,
+      "norm_label": "after upload \u2014 watch ml jobs drain"
+    },
+    {
+      "label": "Duplicate detection (run AFTER bulk uploads)",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L199",
+      "id": "docs_bulk_upload_duplicate_detection_run_after_bulk_uploads",
+      "community": 1,
+      "norm_label": "duplicate detection (run after bulk uploads)"
+    },
+    {
+      "label": "Verifying upload completeness, then deleting source",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L211",
+      "id": "docs_bulk_upload_verifying_upload_completeness_then_deleting_source",
+      "community": 1,
+      "norm_label": "verifying upload completeness, then deleting source"
+    },
+    {
+      "label": "Quick reference",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L231",
+      "id": "docs_bulk_upload_quick_reference",
+      "community": 1,
+      "norm_label": "quick reference"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L249",
+      "id": "docs_bulk_upload_troubleshooting",
+      "community": 1,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "ARCHITECTURE.md",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "id": "docs_architecture_md",
+      "community": 4,
+      "norm_label": "architecture.md"
+    },
+    {
+      "label": "Immich \u2014 Architecture & Tech Stack",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "id": "docs_architecture_immich_architecture_tech_stack",
+      "community": 4,
+      "norm_label": "immich \u2014 architecture & tech stack"
+    },
+    {
+      "label": "What is it",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L3",
+      "id": "docs_architecture_what_is_it",
+      "community": 4,
+      "norm_label": "what is it"
+    },
+    {
+      "label": "Tech stack",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L7",
+      "id": "docs_architecture_tech_stack",
+      "community": 4,
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Source code",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L21",
+      "id": "docs_architecture_source_code",
+      "community": 4,
+      "norm_label": "source code"
+    },
+    {
+      "label": "Config files (this repo)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L31",
+      "id": "docs_architecture_config_files_this_repo",
+      "community": 4,
+      "norm_label": "config files (this repo)"
+    },
+    {
+      "label": "Storage tier (cluster-setup repo)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L41",
+      "id": "docs_architecture_storage_tier_cluster_setup_repo",
+      "community": 4,
+      "norm_label": "storage tier (cluster-setup repo)"
+    },
+    {
+      "label": "Data layout",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L52",
+      "id": "docs_architecture_data_layout",
+      "community": 4,
+      "norm_label": "data layout"
+    },
+    {
+      "label": "Why immich-postgres is separate from shared-postgres",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L69",
+      "id": "docs_architecture_why_immich_postgres_is_separate_from_shared_postgres",
+      "community": 4,
+      "norm_label": "why immich-postgres is separate from shared-postgres"
+    },
+    {
+      "label": "Design decisions",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L77",
+      "id": "docs_architecture_design_decisions",
+      "community": 4,
+      "norm_label": "design decisions"
+    },
+    {
+      "label": "What you'd change to upgrade Immich major version",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L85",
+      "id": "docs_architecture_what_you_d_change_to_upgrade_immich_major_version",
+      "community": 4,
+      "norm_label": "what you'd change to upgrade immich major version"
+    },
+    {
+      "label": "Reference",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L89",
+      "id": "docs_architecture_reference",
+      "community": 4,
+      "norm_label": "reference"
+    },
+    {
+      "label": "USAGE.md",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L1",
+      "id": "docs_usage_md",
+      "community": 5,
+      "norm_label": "usage.md"
+    },
+    {
+      "label": "Immich \u2014 User Manual",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L1",
+      "id": "docs_usage_immich_user_manual",
+      "community": 5,
+      "norm_label": "immich \u2014 user manual"
+    },
+    {
+      "label": "Initial setup (first visit)",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L5",
+      "id": "docs_usage_initial_setup_first_visit",
+      "community": 5,
+      "norm_label": "initial setup (first visit)"
+    },
+    {
+      "label": "Add family members",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L11",
+      "id": "docs_usage_add_family_members",
+      "community": 5,
+      "norm_label": "add family members"
+    },
+    {
+      "label": "Mobile app \u2014 auto-backup from iPhone/Android",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L21",
+      "id": "docs_usage_mobile_app_auto_backup_from_iphone_android",
+      "community": 5,
+      "norm_label": "mobile app \u2014 auto-backup from iphone/android"
+    },
+    {
+      "label": "Browse & search",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L31",
+      "id": "docs_usage_browse_search",
+      "community": 5,
+      "norm_label": "browse & search"
+    },
+    {
+      "label": "Sharing",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L41",
+      "id": "docs_usage_sharing",
+      "community": 5,
+      "norm_label": "sharing"
+    },
+    {
+      "label": "Bulk upload from the Mac (CLI)",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L46",
+      "id": "docs_usage_bulk_upload_from_the_mac_cli",
+      "community": 5,
+      "norm_label": "bulk upload from the mac (cli)"
+    },
+    {
+      "label": "Upgrade Immich to a newer version",
+      "file_type": "document",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L50",
+      "id": "docs_usage_upgrade_immich_to_a_newer_version",
+      "community": 5,
+      "norm_label": "upgrade immich to a newer version"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L1",
+      "id": "docs_readme_md",
+      "community": 22,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Immich \u2014 photo server",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L1",
+      "id": "docs_readme_immich_photo_server",
+      "community": 22,
+      "norm_label": "immich \u2014 photo server"
+    },
+    {
+      "label": "Access",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L5",
+      "id": "docs_readme_access",
+      "community": 22,
+      "norm_label": "access"
+    },
+    {
+      "label": "Detailed docs",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": "L14",
+      "id": "docs_readme_detailed_docs",
+      "community": 22,
+      "norm_label": "detailed docs"
+    },
+    {
+      "label": "UPGRADE.md",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L1",
+      "id": "docs_upgrade_md",
+      "community": 2,
+      "norm_label": "upgrade.md"
+    },
+    {
+      "label": "Immich upgrade runbook \u2014 v2.6.3 \u2192 v2.7.5",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L1",
+      "id": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "community": 2,
+      "norm_label": "immich upgrade runbook \u2014 v2.6.3 \u2192 v2.7.5"
+    },
+    {
+      "label": "0. Pre-flight checks",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L15",
+      "id": "docs_upgrade_0_pre_flight_checks",
+      "community": 2,
+      "norm_label": "0. pre-flight checks"
+    },
+    {
+      "label": "1. Backup BEFORE upgrade (mandatory)",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L43",
+      "id": "docs_upgrade_1_backup_before_upgrade_mandatory",
+      "community": 2,
+      "norm_label": "1. backup before upgrade (mandatory)"
+    },
+    {
+      "label": "2. Check what target version is safe",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L68",
+      "id": "docs_upgrade_2_check_what_target_version_is_safe",
+      "community": 2,
+      "norm_label": "2. check what target version is safe"
+    },
+    {
+      "label": "3. Bump image tags (kubectl set image \u2014 simple, bypasses helm)",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L96",
+      "id": "docs_upgrade_3_bump_image_tags_kubectl_set_image_simple_bypasses_helm",
+      "community": 2,
+      "norm_label": "3. bump image tags (kubectl set image \u2014 simple, bypasses helm)"
+    },
+    {
+      "label": "4. Watch the migration",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L137",
+      "id": "docs_upgrade_4_watch_the_migration",
+      "community": 2,
+      "norm_label": "4. watch the migration"
+    },
+    {
+      "label": "5. Refresh port-forward (immich-server got recreated)",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L158",
+      "id": "docs_upgrade_5_refresh_port_forward_immich_server_got_recreated",
+      "community": 2,
+      "norm_label": "5. refresh port-forward (immich-server got recreated)"
+    },
+    {
+      "label": "6. Verify",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L172",
+      "id": "docs_upgrade_6_verify",
+      "community": 2,
+      "norm_label": "6. verify"
+    },
+    {
+      "label": "7. If something goes wrong \u2014 rollback",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L196",
+      "id": "docs_upgrade_7_if_something_goes_wrong_rollback",
+      "community": 2,
+      "norm_label": "7. if something goes wrong \u2014 rollback"
+    },
+    {
+      "label": "Quick: roll the image back to v2.6.3",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L198",
+      "id": "docs_upgrade_quick_roll_the_image_back_to_v2_6_3",
+      "community": 2,
+      "norm_label": "quick: roll the image back to v2.6.3"
+    },
+    {
+      "label": "If DB migration corrupted data \u2014 full restore",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L207",
+      "id": "docs_upgrade_if_db_migration_corrupted_data_full_restore",
+      "community": 2,
+      "norm_label": "if db migration corrupted data \u2014 full restore"
+    },
+    {
+      "label": "8. Don't forget \u2014 keep snapshots in sync",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L231",
+      "id": "docs_upgrade_8_don_t_forget_keep_snapshots_in_sync",
+      "community": 2,
+      "norm_label": "8. don't forget \u2014 keep snapshots in sync"
+    },
+    {
+      "label": "Quick reference",
+      "file_type": "document",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L243",
+      "id": "docs_upgrade_quick_reference",
+      "community": 2,
+      "norm_label": "quick reference"
+    },
+    {
+      "label": "MAINTENANCE.md",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L1",
+      "id": "docs_maintenance_md",
+      "community": 0,
+      "norm_label": "maintenance.md"
+    },
+    {
+      "label": "Immich \u2014 Deployment & Maintenance",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L1",
+      "id": "docs_maintenance_immich_deployment_maintenance",
+      "community": 0,
+      "norm_label": "immich \u2014 deployment & maintenance"
+    },
+    {
+      "label": "Deploy / redeploy",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L3",
+      "id": "docs_maintenance_deploy_redeploy",
+      "community": 0,
+      "norm_label": "deploy / redeploy"
+    },
+    {
+      "label": "Common operations",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L17",
+      "id": "docs_maintenance_common_operations",
+      "community": 0,
+      "norm_label": "common operations"
+    },
+    {
+      "label": "Restart",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L19",
+      "id": "docs_maintenance_restart",
+      "community": 0,
+      "norm_label": "restart"
+    },
+    {
+      "label": "Scale machine-learning pods (for faster post-upload processing)",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L25",
+      "id": "docs_maintenance_scale_machine_learning_pods_for_faster_post_upload_processing",
+      "community": 0,
+      "norm_label": "scale machine-learning pods (for faster post-upload processing)"
+    },
+    {
+      "label": "Trigger background jobs manually",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L35",
+      "id": "docs_maintenance_trigger_background_jobs_manually",
+      "community": 0,
+      "norm_label": "trigger background jobs manually"
+    },
+    {
+      "label": "Logs",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L38",
+      "id": "docs_maintenance_logs",
+      "community": 0,
+      "norm_label": "logs"
+    },
+    {
+      "label": "Pod resource usage",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L44",
+      "id": "docs_maintenance_pod_resource_usage",
+      "community": 0,
+      "norm_label": "pod resource usage"
+    },
+    {
+      "label": "Storage",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L49",
+      "id": "docs_maintenance_storage",
+      "community": 0,
+      "norm_label": "storage"
+    },
+    {
+      "label": "Backup",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L60",
+      "id": "docs_maintenance_backup",
+      "community": 0,
+      "norm_label": "backup"
+    },
+    {
+      "label": "Upgrade",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L71",
+      "id": "docs_maintenance_upgrade",
+      "community": 0,
+      "norm_label": "upgrade"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L75",
+      "id": "docs_maintenance_troubleshooting",
+      "community": 0,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Upload CLI fails with \"fetch failed\"",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L77",
+      "id": "docs_maintenance_upload_cli_fails_with_fetch_failed",
+      "community": 0,
+      "norm_label": "upload cli fails with \"fetch failed\""
+    },
+    {
+      "label": "Immich pod CrashLoopBackOff",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L83",
+      "id": "docs_maintenance_immich_pod_crashloopbackoff",
+      "community": 0,
+      "norm_label": "immich pod crashloopbackoff"
+    },
+    {
+      "label": "Localhost returns HTTP 000",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L89",
+      "id": "docs_maintenance_localhost_returns_http_000",
+      "community": 0,
+      "norm_label": "localhost returns http 000"
+    },
+    {
+      "label": "Machine-learning pod restarting",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L95",
+      "id": "docs_maintenance_machine_learning_pod_restarting",
+      "community": 0,
+      "norm_label": "machine-learning pod restarting"
+    },
+    {
+      "label": "Photos uploaded but not appearing in timeline",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L101",
+      "id": "docs_maintenance_photos_uploaded_but_not_appearing_in_timeline",
+      "community": 0,
+      "norm_label": "photos uploaded but not appearing in timeline"
+    },
+    {
+      "label": "\"Too many open files in system\" on the HDD",
+      "file_type": "document",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L104",
+      "id": "docs_maintenance_too_many_open_files_in_system_on_the_hdd",
+      "community": 0,
+      "norm_label": "\"too many open files in system\" on the hdd"
+    },
+    {
+      "label": "code-review-graph.instruction.md",
+      "file_type": "document",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L1",
+      "id": "github_code_review_graph_instruction_md",
+      "community": 15,
+      "norm_label": "code-review-graph.instruction.md"
+    },
+    {
+      "label": "MCP Tools: code-review-graph",
+      "file_type": "document",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L9",
+      "id": "github_code_review_graph_instruction_mcp_tools_code_review_graph",
+      "community": 15,
+      "norm_label": "mcp tools: code-review-graph"
+    },
+    {
+      "label": "When to use graph tools FIRST",
+      "file_type": "document",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L17",
+      "id": "github_code_review_graph_instruction_when_to_use_graph_tools_first",
+      "community": 15,
+      "norm_label": "when to use graph tools first"
+    },
+    {
+      "label": "Key Tools",
+      "file_type": "document",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L28",
+      "id": "github_code_review_graph_instruction_key_tools",
+      "community": 15,
+      "norm_label": "key tools"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L41",
+      "id": "github_code_review_graph_instruction_workflow",
+      "community": 15,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "code-review-graph.md",
+      "file_type": "document",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L1",
+      "id": "kiro_steering_code_review_graph_md",
+      "community": 20,
+      "norm_label": "code-review-graph.md"
+    },
+    {
+      "label": "MCP Tools: code-review-graph",
+      "file_type": "document",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L2",
+      "id": "steering_code_review_graph_mcp_tools_code_review_graph",
+      "community": 20,
+      "norm_label": "mcp tools: code-review-graph"
+    },
+    {
+      "label": "When to use graph tools FIRST",
+      "file_type": "document",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L10",
+      "id": "steering_code_review_graph_when_to_use_graph_tools_first",
+      "community": 20,
+      "norm_label": "when to use graph tools first"
+    },
+    {
+      "label": "Key Tools",
+      "file_type": "document",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L20",
+      "id": "steering_code_review_graph_key_tools",
+      "community": 20,
+      "norm_label": "key tools"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L33",
+      "id": "steering_code_review_graph_workflow",
+      "community": 20,
+      "norm_label": "workflow"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup-graph.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "setup_graph_sh",
+      "target": "users_nila_developer_apps_immich_setup_graph_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "opencode_json",
+      "target": "immich_opencode_mcpservers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "immich_opencode_mcpservers",
+      "target": "immich_opencode_mcpservers_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "immich_opencode_mcpservers_code_review_graph",
+      "target": "immich_opencode_code_review_graph_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "immich_opencode_mcpservers_code_review_graph",
+      "target": "immich_opencode_code_review_graph_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "immich_opencode_mcpservers_code_review_graph",
+      "target": "immich_opencode_code_review_graph_cwd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "immich_opencode_mcpservers_code_review_graph",
+      "target": "immich_opencode_code_review_graph_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "immich_opencode_mcpservers_code_review_graph",
+      "target": "immich_opencode_code_review_graph_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "undeploy.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "undeploy_sh",
+      "target": "users_nila_developer_apps_immich_undeploy_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "mcp_json",
+      "target": "immich_mcp_mcp_server_code_review_graph"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "command",
+      "source": "immich_mcp_mcp_server_code_review_graph",
+      "target": "mcp_json_mcp_command_users_nila_local_pipx_venvs_code_review_graph_bin_python"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "deploy_sh",
+      "target": "users_nila_developer_apps_immich_deploy_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".cursor/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "cursor_mcp_json",
+      "target": "cursor_mcp_mcp_server_code_review_graph"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".cursor/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "command",
+      "source": "cursor_mcp_mcp_server_code_review_graph",
+      "target": "cursor_mcp_json_mcp_command_users_nila_local_pipx_venvs_code_review_graph_bin_python"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "gemini_settings_json",
+      "target": "gemini_settings_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "gemini_settings_hooks",
+      "target": "gemini_settings_hooks_aftertool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "gemini_settings_hooks",
+      "target": "gemini_settings_hooks_sessionstart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/hooks/crg-update.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "gemini_hooks_crg_update_sh",
+      "target": "users_nila_developer_apps_immich_gemini_hooks_crg_update_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/hooks/crg-session-start.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "gemini_hooks_crg_session_start_sh",
+      "target": "users_nila_developer_apps_immich_gemini_hooks_crg_session_start_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "qoder_settings_json",
+      "target": "qoder_settings_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "qoder_settings_hooks",
+      "target": "qoder_settings_hooks_posttooluse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".qoder/settings.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "qoder_settings_hooks",
+      "target": "qoder_settings_hooks_sessionstart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".qoder/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "qoder_mcp_json",
+      "target": "qoder_mcp_mcp_server_code_review_graph"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".qoder/mcp.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "command",
+      "source": "qoder_mcp_mcp_server_code_review_graph",
+      "target": "qoder_mcp_json_mcp_command_users_nila_local_pipx_venvs_code_review_graph_bin_python"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_json",
+      "target": "claude_settings_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_posttooluse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_sessionstart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QODER.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "qoder_md",
+      "target": "immich_qoder_mcp_tools_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QODER.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "immich_qoder_mcp_tools_code_review_graph",
+      "target": "immich_qoder_key_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QODER.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "immich_qoder_mcp_tools_code_review_graph",
+      "target": "immich_qoder_when_to_use_graph_tools_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QODER.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "immich_qoder_mcp_tools_code_review_graph",
+      "target": "immich_qoder_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "immich_readme_immich",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "immich_readme_immich",
+      "target": "immich_readme_access",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "immich_readme_immich",
+      "target": "immich_readme_depends_on",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "immich_readme_immich",
+      "target": "immich_readme_docs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "immich_readme_immich",
+      "target": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "immich_readme_immich",
+      "target": "immich_readme_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "immich_readme_immich",
+      "target": "immich_readme_tear_down",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "target": "immich_readme_1_pvc_uuid_immich_upload_localpath_pvc_high_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "target": "immich_readme_2_hdd_paths_machine_specific",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "target": "immich_readme_3_storage_tier_symlinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "target": "immich_readme_4_postgres_db_is_not_on_the_hdd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "target": "immich_readme_5_tailscale_ingress_hostname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "immich_readme_non_portable_bits_read_before_deploying_on_a_new_machine_cluster",
+      "target": "immich_readme_6_orbstack_hdd_mount_fd_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GEMINI.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "gemini_md",
+      "target": "immich_gemini_mcp_tools_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GEMINI.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "immich_gemini_mcp_tools_code_review_graph",
+      "target": "immich_gemini_key_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GEMINI.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "immich_gemini_mcp_tools_code_review_graph",
+      "target": "immich_gemini_when_to_use_graph_tools_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GEMINI.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "immich_gemini_mcp_tools_code_review_graph",
+      "target": "immich_gemini_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "agents_md",
+      "target": "immich_agents_mcp_tools_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "immich_agents_mcp_tools_code_review_graph",
+      "target": "immich_agents_key_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "immich_agents_mcp_tools_code_review_graph",
+      "target": "immich_agents_when_to_use_graph_tools_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "immich_agents_mcp_tools_code_review_graph",
+      "target": "immich_agents_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "immich_claude_mcp_tools_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "immich_claude_mcp_tools_code_review_graph",
+      "target": "immich_claude_key_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "immich_claude_mcp_tools_code_review_graph",
+      "target": "immich_claude_when_to_use_graph_tools_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "immich_claude_mcp_tools_code_review_graph",
+      "target": "immich_claude_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "gemini_skills_debug_issue_skill_md",
+      "target": "gemini_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "gemini_skills_debug_issue_skill_md",
+      "target": "gemini_skills_debug_issue_skill_md_debug_issue_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "gemini_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "target": "gemini_skills_debug_issue_skill_md_debug_issue_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/debug-issue/SKILL.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "gemini_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "target": "gemini_skills_debug_issue_skill_md_debug_issue_skill_tips",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "gemini_skills_refactor_safely_skill_md",
+      "target": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "gemini_skills_refactor_safely_skill_md",
+      "target": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "target": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_safety_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/refactor-safely/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "target": "gemini_skills_refactor_safely_skill_md_refactor_safely_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "gemini_skills_explore_codebase_skill_md",
+      "target": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "gemini_skills_explore_codebase_skill_md",
+      "target": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "target": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/explore-codebase/SKILL.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "target": "gemini_skills_explore_codebase_skill_md_explore_codebase_skill_tips",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "gemini_skills_review_changes_skill_md",
+      "target": "gemini_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "gemini_skills_review_changes_skill_md",
+      "target": "gemini_skills_review_changes_skill_md_review_changes_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "gemini_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "target": "gemini_skills_review_changes_skill_md_review_changes_skill_output_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".gemini/skills/review-changes/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "gemini_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "target": "gemini_skills_review_changes_skill_md_review_changes_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claude_skills_debug_issue_skill_md",
+      "target": "claude_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "claude_skills_debug_issue_skill_md",
+      "target": "claude_skills_debug_issue_skill_md_debug_issue_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "claude_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "target": "claude_skills_debug_issue_skill_md_debug_issue_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/debug-issue/skill.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "claude_skills_debug_issue_skill_md_debug_issue_skill_debug_issue",
+      "target": "claude_skills_debug_issue_skill_md_debug_issue_skill_tips",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claude_skills_refactor_safely_skill_md",
+      "target": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "claude_skills_refactor_safely_skill_md",
+      "target": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "target": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_safety_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/refactor-safely/skill.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_refactor_safely",
+      "target": "claude_skills_refactor_safely_skill_md_refactor_safely_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claude_skills_explore_codebase_skill_md",
+      "target": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "claude_skills_explore_codebase_skill_md",
+      "target": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "target": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/explore-codebase/skill.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_explore_codebase",
+      "target": "claude_skills_explore_codebase_skill_md_explore_codebase_skill_tips",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claude_skills_review_changes_skill_md",
+      "target": "claude_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "claude_skills_review_changes_skill_md",
+      "target": "claude_skills_review_changes_skill_md_review_changes_skill_token_efficiency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "claude_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "target": "claude_skills_review_changes_skill_md_review_changes_skill_output_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/review-changes/skill.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "claude_skills_review_changes_skill_md_review_changes_skill_review_changes",
+      "target": "claude_skills_review_changes_skill_md_review_changes_skill_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_md",
+      "target": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_after_upload_watch_ml_jobs_drain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_auto_create_albums_from_folder_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_basic_upload_single_folder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_bulk_upload_from_external_hdd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_duplicate_detection_run_after_bulk_uploads",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_google_takeout_exports_zipped_photos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_long_running_uploads_run_in_background",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_one_time_setup_per_machine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_pause_mobile_auto_backup_during_bulk_uploads",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_quick_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_scale_ml_pods_after_upload_not_before",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BULK-UPLOAD.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "docs_bulk_upload_immich_bulk_upload_runbook",
+      "target": "docs_bulk_upload_verifying_upload_completeness_then_deleting_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_architecture_md",
+      "target": "docs_architecture_immich_architecture_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_config_files_this_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_data_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_design_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_source_code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_storage_tier_cluster_setup_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_what_is_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_what_you_d_change_to_upgrade_immich_major_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "docs_architecture_immich_architecture_tech_stack",
+      "target": "docs_architecture_why_immich_postgres_is_separate_from_shared_postgres",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_usage_md",
+      "target": "docs_usage_immich_user_manual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_add_family_members",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_browse_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_bulk_upload_from_the_mac_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_initial_setup_first_visit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_mobile_app_auto_backup_from_iphone_android",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_sharing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/USAGE.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_usage_immich_user_manual",
+      "target": "docs_usage_upgrade_immich_to_a_newer_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_readme_md",
+      "target": "docs_readme_immich_photo_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_readme_immich_photo_server",
+      "target": "docs_readme_access",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_readme_immich_photo_server",
+      "target": "docs_readme_detailed_docs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_upgrade_md",
+      "target": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_0_pre_flight_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_1_backup_before_upgrade_mandatory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_2_check_what_target_version_is_safe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_3_bump_image_tags_kubectl_set_image_simple_bypasses_helm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_4_watch_the_migration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_5_refresh_port_forward_immich_server_got_recreated",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_6_verify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_7_if_something_goes_wrong_rollback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_8_don_t_forget_keep_snapshots_in_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "docs_upgrade_immich_upgrade_runbook_v2_6_3_v2_7_5",
+      "target": "docs_upgrade_quick_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "docs_upgrade_7_if_something_goes_wrong_rollback",
+      "target": "docs_upgrade_if_db_migration_corrupted_data_full_restore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UPGRADE.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "docs_upgrade_7_if_something_goes_wrong_rollback",
+      "target": "docs_upgrade_quick_roll_the_image_back_to_v2_6_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_maintenance_md",
+      "target": "docs_maintenance_immich_deployment_maintenance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "docs_maintenance_immich_deployment_maintenance",
+      "target": "docs_maintenance_backup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "docs_maintenance_immich_deployment_maintenance",
+      "target": "docs_maintenance_common_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_maintenance_immich_deployment_maintenance",
+      "target": "docs_maintenance_deploy_redeploy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "docs_maintenance_immich_deployment_maintenance",
+      "target": "docs_maintenance_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "docs_maintenance_immich_deployment_maintenance",
+      "target": "docs_maintenance_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "docs_maintenance_immich_deployment_maintenance",
+      "target": "docs_maintenance_upgrade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "docs_maintenance_common_operations",
+      "target": "docs_maintenance_logs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "docs_maintenance_common_operations",
+      "target": "docs_maintenance_pod_resource_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_maintenance_common_operations",
+      "target": "docs_maintenance_restart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "docs_maintenance_common_operations",
+      "target": "docs_maintenance_scale_machine_learning_pods_for_faster_post_upload_processing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "docs_maintenance_common_operations",
+      "target": "docs_maintenance_trigger_background_jobs_manually",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "docs_maintenance_troubleshooting",
+      "target": "docs_maintenance_immich_pod_crashloopbackoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "docs_maintenance_troubleshooting",
+      "target": "docs_maintenance_localhost_returns_http_000",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "docs_maintenance_troubleshooting",
+      "target": "docs_maintenance_machine_learning_pod_restarting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "docs_maintenance_troubleshooting",
+      "target": "docs_maintenance_photos_uploaded_but_not_appearing_in_timeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "docs_maintenance_troubleshooting",
+      "target": "docs_maintenance_too_many_open_files_in_system_on_the_hdd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/MAINTENANCE.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_maintenance_troubleshooting",
+      "target": "docs_maintenance_upload_cli_fails_with_fetch_failed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "github_code_review_graph_instruction_md",
+      "target": "github_code_review_graph_instruction_mcp_tools_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "github_code_review_graph_instruction_mcp_tools_code_review_graph",
+      "target": "github_code_review_graph_instruction_key_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "github_code_review_graph_instruction_mcp_tools_code_review_graph",
+      "target": "github_code_review_graph_instruction_when_to_use_graph_tools_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".github/code-review-graph.instruction.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "github_code_review_graph_instruction_mcp_tools_code_review_graph",
+      "target": "github_code_review_graph_instruction_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "kiro_steering_code_review_graph_md",
+      "target": "steering_code_review_graph_mcp_tools_code_review_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "steering_code_review_graph_mcp_tools_code_review_graph",
+      "target": "steering_code_review_graph_key_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "steering_code_review_graph_mcp_tools_code_review_graph",
+      "target": "steering_code_review_graph_when_to_use_graph_tools_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".kiro/steering/code-review-graph.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "steering_code_review_graph_mcp_tools_code_review_graph",
+      "target": "steering_code_review_graph_workflow",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "03838ad16943931e2b7f7f43970b26b69d6f3ca5"
+}
