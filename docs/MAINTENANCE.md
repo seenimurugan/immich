@@ -1,5 +1,7 @@
 # Immich — Deployment & Maintenance
 
+**On this page:** [Deploy / redeploy](#deploy--redeploy) · [Common operations](#common-operations) · [Storage](#storage) · [Backup](#backup) · [Upgrade](#upgrade) · [Troubleshooting](#troubleshooting)
+
 ## Deploy / redeploy
 
 Immich runs via the official Helm chart (`immich/immich`), with our own Postgres StatefulSet alongside (the chart doesn't bundle Postgres).

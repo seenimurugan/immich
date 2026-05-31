@@ -1,5 +1,7 @@
 # Immich — Architecture & Tech Stack
 
+**On this page:** [Deployment diagram](#deployment-diagram) · [What is it](#what-is-it) · [Tech stack](#tech-stack) · [Source code](#source-code) · [Config files (this repo)](#config-files-this-repo) · [Storage tier (cluster-setup repo)](#storage-tier-cluster-setup-repo) · [Data layout](#data-layout) · [Why immich-postgres is separate from shared-postgres](#why-immich-postgres-is-separate-from-shared-postgres) · [Design decisions](#design-decisions) · [What you'd change to upgrade Immich major version](#what-youd-change-to-upgrade-immich-major-version) · [Reference](#reference)
+
 ## Deployment diagram
 
 ```mermaid
