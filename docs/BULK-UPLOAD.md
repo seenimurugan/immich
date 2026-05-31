@@ -2,6 +2,8 @@
 
 Self-serve guide for uploading photos to Immich from a folder, HDD, or Google Takeout zips. No coding agent required.
 
+**On this page:** [One-time setup (per machine)](#one-time-setup-per-machine) · [Pause mobile auto-backup during bulk uploads](#pause-mobile-auto-backup-during-bulk-uploads) · [Scale ML pods AFTER upload, not before](#scale-ml-pods-after-upload-not-before) · [Basic upload (single folder)](#basic-upload-single-folder) · [Bulk upload from external HDD](#bulk-upload-from-external-hdd) · [Long-running uploads — run in background](#long-running-uploads--run-in-background) · [Google Takeout exports (zipped photos)](#google-takeout-exports-zipped-photos) · [Auto-create albums from folder names](#auto-create-albums-from-folder-names) · [After upload — watch ML jobs drain](#after-upload--watch-ml-jobs-drain) · [Duplicate detection (run AFTER bulk uploads)](#duplicate-detection-run-after-bulk-uploads) · [Verifying upload completeness, then deleting source](#verifying-upload-completeness-then-deleting-source) · [Quick reference](#quick-reference) · [Troubleshooting](#troubleshooting)
+
 ---
 
 ## One-time setup (per machine)

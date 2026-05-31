@@ -2,6 +2,8 @@
 
 How to use Immich day-to-day. See [README](README.md) for access URLs.
 
+**On this page:** [Initial setup (first visit)](#initial-setup-first-visit) · [Add family members](#add-family-members) · [Mobile app — auto-backup from iPhone/Android](#mobile-app--auto-backup-from-iphoneandroid) · [Browse & search](#browse--search) · [Sharing](#sharing) · [Bulk upload from the Mac (CLI)](#bulk-upload-from-the-mac-cli) · [Upgrade Immich to a newer version](#upgrade-immich-to-a-newer-version)
+
 ## Initial setup (first visit)
 
 1. Open https://immich.stoat-perch.ts.net

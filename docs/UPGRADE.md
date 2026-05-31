@@ -10,6 +10,8 @@ Goal: bring the cluster from Immich v2.6.3 to v2.7.5, safely.
 
 **Do this AFTER bulk uploads + dedup are done** — image change kills the immich-server pod and crashes any in-flight CLI upload.
 
+**On this page:** [0. Pre-flight checks](#0-pre-flight-checks) · [1. Backup BEFORE upgrade (mandatory)](#1-backup-before-upgrade-mandatory) · [2. Check what target version is safe](#2-check-what-target-version-is-safe) · [3. Bump image tags (kubectl set image — simple, bypasses helm)](#3-bump-image-tags-kubectl-set-image--simple-bypasses-helm) · [4. Watch the migration](#4-watch-the-migration) · [5. Refresh port-forward (immich-server got recreated)](#5-refresh-port-forward-immich-server-got-recreated) · [6. Verify](#6-verify) · [7. If something goes wrong — rollback](#7-if-something-goes-wrong--rollback) · [8. Don't forget — keep snapshots in sync](#8-dont-forget--keep-snapshots-in-sync) · [Quick reference](#quick-reference)
+
 ---
 
 ## 0. Pre-flight checks

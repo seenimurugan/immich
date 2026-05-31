@@ -4,6 +4,8 @@
 
 Source: `/Users/nila/Developer/apps/immich/`
 
+**On this page:** [Access](#access) · [Initial credentials](#initial-credentials) · [What it does](#what-it-does) · [Stack & framework](#stack--framework) · [Storage](#storage) · [See also](#see-also) · [File reference](#file-reference)
+
 ---
 
 ## Access
