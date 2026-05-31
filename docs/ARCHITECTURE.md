@@ -1,5 +1,20 @@
 # Immich — Architecture & Tech Stack
 
+## Deployment diagram
+
+```mermaid
+graph TD
+    A[Browser / Mobile App on Tailnet] -->|HTTPS| B[Tailscale Ingress\nimmich.stoat-perch.ts.net]
+    B --> C[immich-server Service\nport 2283]
+    C --> D[immich-server Pod\nNestJS]
+    D -->|ML inference| E[immich-machine-learning Pod\nPython]
+    D -->|cache| F[valkey Pod\nRedis fork]
+    D -->|JDBC| G[immich-postgres Pod\nPostgreSQL 17 + pgvector + vectorchord]
+    D -->|photos/videos| H[immich-library-pv\nHDD hostPath]
+    G --> I[immich-postgres-pvc\n local-path ext4]
+    E --> J[immich-model-cache-pvc\n local-path ext4]
+```
+
 ## What is it
 
 [Immich](https://immich.app) is a self-hosted Google Photos replacement. AI face recognition, smart search, mobile auto-backup, web/mobile/desktop apps. Open source.
