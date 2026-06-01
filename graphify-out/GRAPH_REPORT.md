@@ -1,16 +1,16 @@
-# Graph Report - immich  (2026-05-30)
+# Graph Report - immich  (2026-06-01)
 
 ## Corpus Check
-- 33 files · ~10,303 words
+- 33 files · ~10,658 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 196 nodes · 163 edges · 33 communities (25 shown, 8 thin omitted)
+- 203 nodes · 170 edges · 33 communities (25 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `03838ad1`
+- Built from commit: `06bc0d2b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -51,15 +51,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `Immich Bulk Upload — runbook` - 14 edges
-2. `Immich — Architecture & Tech Stack` - 11 edges
+2. `Immich — Architecture & Tech Stack` - 12 edges
 3. `Immich upgrade runbook — v2.6.3 → v2.7.5` - 11 edges
-4. `Immich — User Manual` - 8 edges
-5. `immich` - 7 edges
-6. `!! NON-PORTABLE BITS — read before deploying on a new machine/cluster !!` - 7 edges
-7. `Immich — Deployment & Maintenance` - 7 edges
-8. `Troubleshooting` - 7 edges
-9. `code-review-graph` - 6 edges
-10. `Common operations` - 6 edges
+4. `Immich — photo server` - 9 edges
+5. `Immich — User Manual` - 8 edges
+6. `immich` - 7 edges
+7. `!! NON-PORTABLE BITS — read before deploying on a new machine/cluster !!` - 7 edges
+8. `Immich — Deployment & Maintenance` - 7 edges
+9. `Troubleshooting` - 7 edges
+10. `code-review-graph` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -83,8 +83,8 @@ Cohesion: 0.14
 Nodes (13): 1. PVC UUID — `immich-upload-localpath-pvc` (HIGH PRIORITY), 2. HDD paths (machine-specific), 3. Storage-tier symlinks, 4. Postgres DB is NOT on the HDD, 5. Tailscale ingress hostname, 6. OrbStack HDD mount fd limit, Access, Depends on (+5 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.17
-Nodes (11): Config files (this repo), Data layout, Design decisions, Immich — Architecture & Tech Stack, Reference, Source code, Storage tier (cluster-setup repo), Tech stack (+3 more)
+Cohesion: 0.15
+Nodes (12): Config files (this repo), Data layout, Deployment diagram, Design decisions, Immich — Architecture & Tech Stack, Reference, Source code, Storage tier (cluster-setup repo) (+4 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.22
@@ -155,8 +155,8 @@ Cohesion: 0.50
 Nodes (3): hooks, PostToolUse, SessionStart
 
 ### Community 22 - "Community 22"
-Cohesion: 0.50
-Nodes (3): Access, Detailed docs, Immich — photo server
+Cohesion: 0.20
+Nodes (9): Access, Detailed docs, File reference, Immich — photo server, Initial credentials, See also, Stack & framework, Storage (+1 more)
 
 ### Community 23 - "Community 23"
 Cohesion: 0.50
@@ -167,7 +167,7 @@ Cohesion: 0.50
 Nodes (3): hooks, PostToolUse, SessionStart
 
 ## Knowledge Gaps
-- **130 isolated node(s):** `setup-graph.sh script`, `command`, `args`, `cwd`, `type` (+125 more)
+- **137 isolated node(s):** `setup-graph.sh script`, `command`, `args`, `cwd`, `type` (+132 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -175,7 +175,7 @@ Nodes (3): hooks, PostToolUse, SessionStart
 _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `setup-graph.sh script`, `command`, `args` to the rest of the system?**
-  _130 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _137 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

@@ -2,7 +2,7 @@
 
 Self-serve guide for uploading photos to Immich from a folder, HDD, or Google Takeout zips. No coding agent required.
 
-**On this page:** [One-time setup (per machine)](#one-time-setup-per-machine) · [Pause mobile auto-backup during bulk uploads](#pause-mobile-auto-backup-during-bulk-uploads) · [Scale ML pods AFTER upload, not before](#scale-ml-pods-after-upload-not-before) · [Basic upload (single folder)](#basic-upload-single-folder) · [Bulk upload from external HDD](#bulk-upload-from-external-hdd) · [Long-running uploads — run in background](#long-running-uploads--run-in-background) · [Google Takeout exports (zipped photos)](#google-takeout-exports-zipped-photos) · [Auto-create albums from folder names](#auto-create-albums-from-folder-names) · [After upload — watch ML jobs drain](#after-upload--watch-ml-jobs-drain) · [Duplicate detection (run AFTER bulk uploads)](#duplicate-detection-run-after-bulk-uploads) · [Verifying upload completeness, then deleting source](#verifying-upload-completeness-then-deleting-source) · [Quick reference](#quick-reference) · [Troubleshooting](#troubleshooting)
+**On this page:** [One-time setup (per machine)](#one-time-setup-per-machine) · [Pause mobile auto-backup during bulk uploads](#pause-mobile-auto-backup-during-bulk-uploads) · [Scale ML pods AFTER upload, not before](#scale-ml-pods-after-upload-not-before) · [Basic upload (single folder)](#basic-upload-single-folder) · [Bulk upload from external HDD](#bulk-upload-from-external-hdd) · [Long-running uploads — run in background](#long-running-uploads--run-in-background) · [Google Takeout exports (zipped photos)](#google-takeout-exports-zipped-photos) · [Auto-create albums from folder names](#auto-create-albums-from-folder-names) · [After upload — watch ML jobs drain](#after-upload--watch-ml-jobs-drain) · [Duplicate detection (run AFTER bulk uploads)](#duplicate-detection-run-after-bulk-uploads) · [Verifying upload completeness, then deleting source](#verifying-upload-completeness-then-deleting-source) · [Upload + verify + delete (all-in-one)](#upload--verify--delete-all-in-one) · [Quick reference](#quick-reference) · [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -187,14 +187,18 @@ Each top-level folder becomes an album. Great for "Family Trip Italy 2024" style
 
 ## After upload — watch ML jobs drain
 
-Open http://localhost:2283 (browser via launchd port-forward) → **Administration** → **Jobs**. You'll see queues for:
-- Thumbnail Generation
-- Face Recognition
-- Smart Search (CLIP)
-- Library Sync
-- Storage Template Migration
+**Automated (recommended):** run the watcher script — it polls the Immich API every 60s, scales ML back to 1 once all queues hit 0, and posts a macOS notification. Survives terminal close.
 
-Wait until all hit 0 before considering import complete.
+```bash
+nohup ~/homelab/immich-wait-jobs-drained.sh --scale \
+  > ~/homelab/upload-logs/jobs-watch.log 2>&1 &
+disown
+tail -f ~/homelab/upload-logs/jobs-watch.log   # optional live view
+```
+
+Script is at `/Users/nila/homelab/immich-wait-jobs-drained.sh`. Without `--scale` it just waits and notifies. Override poll interval with `INTERVAL=30 ...`.
+
+**Manual:** open http://localhost:2283 → **Administration** → **Jobs**. Wait until all queues (Thumbnail / Face Recognition / Smart Search / Library / Storage Template) hit 0.
 
 ---
 
@@ -227,6 +231,58 @@ rm -rf "/path/to/source"
 ```
 
 **Strongly recommended:** ensure your weekly backup is running (see `backup-immich.sh`) before deleting any originals — your primary HDD is a single point of failure.
+
+---
+
+## Upload + verify + delete (all-in-one)
+
+`immich-upload-and-delete.sh` is a safe wrapper that uploads one or more source folders, verifies the result, and **only deletes the source if every file was confirmed uploaded** (zero failures or verify errors).
+
+### How it works
+
+1. Runs `immich upload --recursive --concurrency 4 <source>` and captures the full log.
+2. Scans the log for failure signals:
+   - `Failed to verify` lines → **keep source**
+   - `Error:` / `throw ` / `unhandledRejection` / `ENOENT` / `ENXIO` → **keep source**
+   - No confirmation line (`All assets were already uploaded` / `Successfully uploaded` / `new files and N duplicates`) → **keep source**
+3. Only deletes source via `rm -rf` when all three checks pass clean.
+4. Logs go to `~/homelab/upload-logs/upload-<timestamp>-<slug>.log` — one file per source path.
+
+### Usage
+
+```zsh
+# Single folder
+~/homelab/immich-upload-and-delete.sh "/Volumes/Seeni's HDD/Family Photos 2023"
+
+# Multiple folders in one call
+~/homelab/immich-upload-and-delete.sh \
+  "/Volumes/Seeni's HDD/Family Photos 2023" \
+  "/Volumes/Seeni's HDD/Family Photos 2024" \
+  "/Volumes/Seeni's HDD/WhatsApp exports"
+```
+
+Output for a clean run:
+```
+=== /Volumes/Seeni's HDD/Family Photos 2023 ===
+log: /Users/nila/homelab/upload-logs/upload-20260601-143022-Volumes-Seeni-s-HDD-Family-Photos-2023.log
+... (immich CLI output) ...
+✅ Upload clean — deleting source
+🗑  deleted: /Volumes/Seeni's HDD/Family Photos 2023
+```
+
+Output when an error is detected:
+```
+❌ KEEPING /Volumes/Seeni's HDD/Family Photos 2024 — upload had failed-to-verify files. See ...
+```
+
+### Script locations
+
+| Location | Purpose |
+|---|---|
+| `~/homelab/immich-upload-and-delete.sh` | User-local copy — run from here |
+| `scripts/immich-upload-and-delete.sh` | Canonical repo copy — stays in sync |
+
+> **Tip:** Concurrency is fixed at 4 in the script (conservative, safe for USB HDDs and OrbStack FUSE). Edit the `--concurrency` flag in the script if you want to go faster on a fast drive.
 
 ---
 
