@@ -61,13 +61,13 @@ Two PVCs:
 
 ## Backup
 
-Weekly automated via `~/homelab/backup-immich.sh` (launchd, Sundays 03:00). Backs up photo files + Postgres dump.
+Weekly automated via `~/homelab/backup-immich.sh` (launchd, Sundays 03:00). Backs up photo files + Postgres dump to **`/Volumes/homelab-backup-hdd/backups`** (3 TB HFS+, primary backup disk; was `Seeni's HDD` until 2026-06-02 — that path was stale so the job had been silently skipping).
 
 Manual DB dump:
 ```bash
 PG_POD=$(kubectl get pod -n homelab -l app=immich-postgres -o jsonpath='{.items[0].metadata.name}')
 kubectl exec -n homelab "$PG_POD" -- pg_dump -U immich -d immich --no-owner --clean --if-exists \
-  | gzip > "/Volumes/Seeni's HDD/immich/manual-backup-$(date +%Y%m%d-%H%M%S).sql.gz"
+  | gzip > "/Volumes/homelab-backup-hdd/backups/immich-manual-$(date +%Y%m%d-%H%M%S).sql.gz"
 ```
 
 ## Upgrade
