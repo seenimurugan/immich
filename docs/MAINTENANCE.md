@@ -16,6 +16,12 @@ helm upgrade immich /tmp/immich --namespace homelab -f ~/homelab/immich-values.y
 
 For a fresh chart: `helm pull immich/immich` (chart 0.12.0 may 404 — fall back to 0.11.1).
 
+## Archive log
+
+| Date | Action |
+|---|---|
+| 2026-06-02 | 7,402 security-camera clips (Sept–Oct 2019, ~57.86 GB) exported to `/Volumes/homelab-hdd/security camera recordings/` (28 date subfolders 2019-09-22 … 2019-10-20) and permanently deleted from Immich. Asset count: 64,347 → 56,945. |
+
 ## Common operations
 
 ### Restart
@@ -36,6 +42,16 @@ kubectl scale deployment immich-machine-learning -n homelab --replicas=1
 
 ### Trigger background jobs manually
 Web UI → Administration → Jobs → click ▶ on any queue (Thumbnail Generation, Face Recognition, Smart Search, Duplicate Detection).
+
+### Background job concurrency
+`faceDetection` and `thumbnailGeneration` concurrency is set to **3** (raised from 1 on 2026-06-02 via Admin API). Adjust via Administration → Jobs → concurrency controls, or the Immich API:
+```bash
+# Example: set faceDetection concurrency to 3
+curl -X PUT "http://immich-server.homelab.svc.cluster.local:2283/api/jobs/faceDetection" \
+  -H "x-api-key: $(grep apiKey ~/.config/immich/auth.yml | awk '{print $2}')" \
+  -H "Content-Type: application/json" \
+  -d '{"concurrency": 3}'
+```
 
 ### Logs
 ```bash
@@ -108,3 +124,34 @@ OrbStack exFAT passthrough wedged. Fix:
 ```bash
 orbctl stop && orbctl start
 ```
+
+### Big / tiered videos won't play (thumbnails OK)
+
+**Symptom:** Thumbnails load fine; clicking a >2 GB tiered asset spins forever or returns no data.
+
+**Background — propagation-safe mount (as of 2026-06):**  
+The pod no longer mounts `/Volumes/homelab-hdd` directly at `/data-hdd`. Instead it mounts the always-present parent `/Volumes` (hostPath, `type: Directory`) at `/hdd-root` with `mountPropagation: HostToContainer`. Tiered files are read via `/hdd-root/homelab-hdd/immich-library/...`.
+
+This means:
+- **HDD unplug** — the app keeps serving SSD content instantly (fast "not found" for tiered assets rather than a hang). No restart required.
+- **HDD replug** — tiered files reappear inside the running pod automatically. No restart required.
+- The old `hdd-healer` CronJob that used to force-restart the pod on stale mounts has been **deleted entirely**.
+
+**If tiered files still don't appear after HDD replug** (should be rare), verify the HDD is visible on the host first:
+```bash
+ls /Volumes/homelab-hdd/immich-library/
+```
+If that works but the pod can't see files, confirm propagation is active:
+```bash
+kubectl exec -n homelab deployment/immich-server -- ls /hdd-root/homelab-hdd/immich-library/
+```
+If the HDD is mounted on the host but the pod path is empty, check `mountPropagation: HostToContainer` is set in the Helm values and the pod spec (a `helm upgrade` may be needed if values drifted).
+
+**Verify a tiered asset streams correctly:**
+```bash
+curl -I -H "x-api-key: <key>" \
+  "http://immich-server.homelab.svc.cluster.local:2283/api/assets/<id>/video/playback"
+# expect: HTTP/1.1 206 Partial Content
+```
+
+**Backup note:** `~/homelab/backup-immich.sh` streams a `kubectl exec … tar -C /data` — if the HDD is unplugged, tiered files simply won't be in the archive (no hang). Re-run backup after the HDD is back.
