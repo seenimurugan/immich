@@ -96,18 +96,24 @@ valkey:
 
 server:
   enabled: true
-  # HDD tier mount — symlinks created by tier-mover-immich (cluster-setup repo)
-  # target /data-hdd/... Without this mount, Immich can't follow the symlinks.
-  # type: "" required (do NOT use DirectoryOrCreate — OrbStack HDD mount fd limit).
+  # HDD tier mount — symlinks created by tier-mover-immich (storage-console repo)
+  # now target /hdd-root/homelab-hdd/immich-library/... Without this mount,
+  # Immich can't follow the symlinks.
   # See: https://github.com/seenimurugan/homelab-cluster-setup (storage-tier docs)
   persistence:
-    hdd:
+    # Propagation-safe HDD mount. Parent /Volumes is mounted (type: Directory)
+    # with mountPropagation: HostToContainer so an HDD unplug fast-fails inside
+    # the container instead of hanging, and a replug auto-recovers (the host
+    # remount propagates through the bind). Tiered symlinks target
+    # /hdd-root/homelab-hdd/immich-library/... (see tier-mover, storage-console).
+    hddroot:
       enabled: true
       type: hostPath
-      hostPath: ${HOMELAB_TIER_HDD_PATH}/immich-library
-      hostPathType: ""
+      hostPath: /Volumes
+      hostPathType: Directory
       globalMounts:
-        - path: /data-hdd
+        - path: /hdd-root
+          mountPropagation: HostToContainer
   controllers:
     main:
       containers:
