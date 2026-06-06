@@ -24,6 +24,8 @@ Source: `/Users/nila/Developer/apps/immich/`
 
 Immich is set up on first visit via the web wizard — create an admin account with any username and password. There is no pre-seeded default. See [USAGE → Initial setup](USAGE.md#initial-setup) for the walkthrough.
 
+> **Note:** Immich does **not** use the homelab-wide `admin/admin` default. Authenticate CLI tools (e.g. `immich-go`) via the admin API key stored in `~/.config/immich/auth.yml`. Do **not** assume `admin/admin` works here.
+
 ---
 
 ## What it does
@@ -32,7 +34,7 @@ Immich is set up on first visit via the web wizard — create an admin account w
 - AI face recognition and smart search (powered by `immich-machine-learning` + pgvector).
 - Family sharing — each person has their own account; albums can be shared.
 - Web and mobile (iOS/Android) apps with timeline, album, map, and explore views.
-- Large-file tiering: files >2 GB are moved to the external HDD by the Storage Console CronJob.
+- Large-file tiering: files >2 GB are moved to the external HDD by the Storage Console CronJob and served via a propagation-safe `/hdd-root` mount (self-healing on HDD unplug/replug — no pod restart needed).
 
 ---
 
@@ -53,6 +55,7 @@ Immich is set up on first visit via the web wizard — create an admin account w
 | PVC / Volume | Purpose |
 |---|---|
 | `immich-library-pv` (hostPath → HDD) | Photo + video library (large files tiered here from the Mac) |
+| `/hdd-root` (hostPath `/Volumes`, `HostToContainer`) | Propagation-safe HDD mount — tiered files at `/hdd-root/homelab-hdd/immich-library/`; self-healing on HDD unplug/replug |
 | `immich-postgres-pvc` (local-path, ext4) | PostgreSQL data dir — must be on ext4 (not exFAT) |
 | `immich-model-cache-pvc` (local-path) | Machine learning model cache |
 

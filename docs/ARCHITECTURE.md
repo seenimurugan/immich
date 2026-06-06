@@ -12,7 +12,7 @@ graph TD
     D -->|ML inference| E[immich-machine-learning Pod\nPython]
     D -->|cache| F[valkey Pod\nRedis fork]
     D -->|JDBC| G[immich-postgres Pod\nPostgreSQL 17 + pgvector + vectorchord]
-    D -->|photos/videos| H[immich-library-pv\nHDD hostPath]
+    D -->|photos/videos| H[/hdd-root hostPath /Volumes\nmountPropagation HostToContainer\ntiered files via /hdd-root/homelab-hdd/immich-library]
     G --> I[immich-postgres-pvc\n local-path ext4]
     E --> J[immich-model-cache-pvc\n local-path ext4]
 ```
@@ -58,13 +58,32 @@ Immich is **off-the-shelf** — no custom code from us. We provide config + stor
 ## Storage tier (cluster-setup repo)
 
 Photos larger than 2 GiB are moved to the external HDD via symlinks by the
-**tier-mover-immich** CronJob. This repo is the *consumer* side only — it
-mounts `${HOMELAB_TIER_HDD_PATH}/immich-library` as `/data-hdd` inside the
-server pod so Immich can follow those symlinks for tiered files.
+**tier-mover-immich** CronJob (managed by the Storage Console). This repo is
+the *consumer* side only — it mounts tiered files via the propagation-safe
+`/hdd-root` volume (see below).
 
 The tier-mover CronJob, `tier-now.sh` manual trigger, and tiered-storage
 documentation live in the cluster-setup repo:
 [github.com/seenimurugan/homelab-cluster-setup](https://github.com/seenimurugan/homelab-cluster-setup)
+
+## Propagation-safe HDD mount
+
+The pod mounts `/Volumes` (the always-present macOS volumes directory) at
+`/hdd-root` using `hostPath` + `mountPropagation: HostToContainer`. Tiered
+files are accessed at `/hdd-root/homelab-hdd/immich-library/…`.
+
+**Why:** the previous direct mount of `/Volumes/homelab-hdd` at `/data-hdd`
+produced a stale virtiofs handle whenever the HDD was unplugged — the pod
+hung on any tiered-file access and required an external `hdd-healer` CronJob
+to restart it. The propagation mount eliminates both failure modes:
+
+| Event | Old behaviour | New behaviour |
+|---|---|---|
+| HDD unplugged | pod hangs on tiered reads | fast "not found"; SSD content unaffected |
+| HDD replugged | required pod restart (healer) | tiered files reappear automatically |
+
+The `hdd-healer` CronJob has been deleted. Reverse-symlink scripts that
+re-point tiered files to the new path live in `storage-console/scripts/`.
 
 ## Data layout
 
@@ -77,7 +96,8 @@ ${HOMELAB_HDD_PATH}/immich/
     ├── encoded-video/     ← auto-regenerable
     └── profile/
 
-${HOMELAB_TIER_HDD_PATH}/immich-library/   ← tiered files (written by tier-mover, mounted as /data-hdd)
+/Volumes/homelab-hdd/immich-library/   ← tiered files (written by tier-mover)
+                                          accessible inside pod at /hdd-root/homelab-hdd/immich-library/
 
 local-path PVC (VM ext4)
 └── immich-postgres data   ← metadata, albums, face data, smart-search vectors
@@ -95,6 +115,7 @@ Cleaner to leave each Postgres alone:
 
 - **CLI uses cluster DNS not localhost** — kubectl port-forward dies under bulk-upload load. Cluster DNS is direct via OrbStack network bridge — no fragility. See [BULK-UPLOAD.md](BULK-UPLOAD.md).
 - **Photos on HDD, DB on local-path** — exFAT can't host Postgres safely. Files are read-mostly (fine for exFAT), DB needs POSIX semantics (needs ext4).
+- **Propagation-safe HDD mount** — the pod mounts `/Volumes` (not the HDD path directly) at `/hdd-root` with `mountPropagation: HostToContainer`. HDD unplug causes a fast "not found" rather than a hang; replug restores tiered files without a pod restart. The old `hdd-healer` CronJob is gone. See [Propagation-safe HDD mount](#propagation-safe-hdd-mount).
 - **ML pods scale up only AFTER uploads** — concurrent upload + 3 ML pods overload the VM. Scale up post-upload to drain the job queue, then scale back.
 - **Relaxed probes (15s timeout)** — defaults (1s) caused restart loops during heavy work.
 - **Helm chart 0.11.1, image tag v2.7.5** — chart maintainers haven't released a v2.7.x chart yet, so we pin a newer image into the older chart. See [UPGRADE.md](UPGRADE.md).
