@@ -13,10 +13,13 @@ Source: `/Users/nila/Developer/apps/immich/`
 | Where | URL |
 |---|---|
 | **iPhone / family on Tailscale** | https://immich.stoat-perch.ts.net |
+| **Public photo/video sharing (Funnel)** | https://seeni-photos.stoat-perch.ts.net |
 | **This Mac (browser, localhost)** | http://localhost:2283 *(only when the port-forward is running)* |
 | **LAN devices (without Tailscale)** | http://192.168.68.57:2283 *(same condition)* |
 | **Cluster DNS** (other pods / Mac shell) | http://immich-server.homelab.svc.cluster.local:2283 |
 | **Ad-hoc debug port-forward** | `kubectl -n homelab port-forward svc/immich-server 2283:2283` |
+
+> **Note:** `seeni-photos.stoat-perch.ts.net` serves Immich **shared-album links only** via the immich-public-proxy; the full library stays private at https://immich.stoat-perch.ts.net.
 
 ---
 
